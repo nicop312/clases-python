@@ -1,2 +1,2 @@
 # Clases-python
-BRUH NIGG
+NEGRICK
