@@ -1,2 +1,2 @@
 # Clases-python
-clases de python
+BRUH NIGG
