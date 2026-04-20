@@ -61,3 +61,30 @@ print(len(nombre))
 ##print("Python" in Tecnología_para_todos)
 ##print(Tecnología_para_todos.replace("Tecnología", "Programación"))
 ##print(Tecnología_para_todos.split())
+## PARTE C
+##1. Solicite al usuario: Nombre, apellido, país, ancho de la pared, alto de la pared, precio por metro
+##cuadrado
+##o Calcule: área de la pared, costo total estimado
+##2. Cree la variable nombre_completo.
+##1. Muestre un reporte final que incluya:
+##o nombre completo, país, área calculada, costo total (La impresión del reporte final debe realizarse usando f-strings.)
+##3. Muestre además:
+##o nombre_completo en mayúsculas
+##o la longitud de nombre_completo
+##o si la letra "a" está presente en nombre_completo
+##o si el costo total es mayor que 100 
+##Respuesta:
+nombre = input("Ingrese su nombre: ")
+apellido = input("Ingrese su apellido: ")
+pais = input("Ingrese su país: ")
+ancho_pared = float(input("Ingrese el ancho de la pared en metros: "))
+alto_pared = float(input("Ingrese el alto de la pared en metros: "))
+precio_metro_cuadrado = float(input("Ingrese el precio por metro cuadrado:"))
+area_pared = ancho_pared * alto_pared
+costo_total = area_pared * precio_metro_cuadrado
+nombre_completo = nombre + " " + apellido
+print(f"Reporte Final:\nNombre Completo: {nombre_completo}\nPaís: {pais}\nÁrea Calculada: {area_pared} metros cuadrados\nCosto Total: ${costo_total}")
+print(nombre_completo.upper())
+print(len(nombre_completo))
+print("a" in nombre_completo)
+print(costo_total > 100)
