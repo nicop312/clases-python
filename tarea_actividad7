@@ -1,0 +1,73 @@
+##### EJERCICIO LISTAS
+notas = [8.5, 6.0, 9.0, 7.0, 5.5]
+suma=0
+aprobados = 0
+promedio = 0
+reporbados = 0
+for nota in notas:
+    suma= suma + nota 
+    promedio = suma / 5
+    if nota >= 7:
+        aprobados = aprobados + 1
+    else:
+        reporbados = reporbados + 1
+print (aprobados)
+print (reporbados)
+print (suma)
+print (promedio)
+
+##### EJERCICIO STRING
+contrasena = "Python2026"
+total_letras = 0
+total_numeros = 0
+veces_o = 0
+for caracter in contrasena:
+    if caracter.isalpha():  
+        total_letras = total_letras + 1
+        if caracter == 'o': 
+            veces_o = veces_o + 1
+    elif caracter.isdigit():  
+        total_numeros = total_numeros + 1
+print("\n--- Análisis de la contraseña ---")
+print(f"Contraseña: {contrasena}")
+print(f"Total de letras: {total_letras}")
+print(f"Total de números: {total_numeros}")
+print(f"Veces que aparece 'o': {veces_o}")
+####estas funciones las acabo de descubrir gracias a la ia, la verdad ni sabia que existian###
+
+##### EJERCICIO SET
+productos = {"teclado", "mouse", "monitor", "mouse", "impresora"}
+total_productos_unicos = 0
+for producto in productos:
+    total_productos_unicos = total_productos_unicos + 1
+productos_mas_6_letras = 0
+for producto in productos:
+    cantidad_letras = 0
+    for letra in producto:
+        cantidad_letras = cantidad_letras + 1
+    if cantidad_letras > 6:
+        productos_mas_6_letras = productos_mas_6_letras + 1
+print("\n--- Análisis del conjunto de productos ---")
+print(f"Conjunto original: {productos}")
+print(f"Total de productos únicos: {total_productos_unicos}")
+print(f"Productos con más de 6 letras: {productos_mas_6_letras}")
+
+##### EJERCICIO CON BREAK
+correo = input("\nIngresa tu correo electrónico: ")
+usuario = " "
+for caracter in correo:
+    if caracter == "@":
+        break
+    usuario = usuario + caracter
+print(f"\nNombre de usuario: {usuario}")
+
+##### EJERCICIO CON CONTINUE
+telefono_original = input("\nIngresa un número de teléfono (puede tener espacios o guiones): ")
+telefono_limpio = " "
+for caracter in telefono_original:
+    if caracter == " " or caracter == "-":
+        continue
+    telefono_limpio = telefono_limpio + caracter
+
+print(f"Teléfono original: {telefono_original}")
+print(f"Teléfono limpio: {telefono_limpio}")
