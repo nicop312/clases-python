@@ -1,0 +1,15 @@
+def mostrar_estudiante (nombre, curso):
+    print('=== DATOS DEL ESTUDIANTE ===')
+    print(f'Nombre: {nombre}')
+    print(f'Curso: {curso}')
+nombre_usuario = input("Ingrese el nombre del estudiante:")
+curso_usuario = input("Ingrese el curso del estudiante:")
+mostrar_estudiante (nombre_usuario, curso_usuario)
+
+def tuf():
+    Nombre= "nicolas"
+    Apellido= "Avalos"
+    Space= " "
+    completo= Nombre + Space +Apellido
+    print(completo)
+tuf()
