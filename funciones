@@ -13,3 +13,16 @@ def tuf():
     completo= Nombre + Space +Apellido
     print(completo)
 tuf()
+
+Tare
+cuantos= int(input("INGRESE LA CANTIDAD DE ESTUDIANTES A REGISTRAR:"))
+count= 0
+while count != cuantos+1:
+    count += 1
+    def mostrar_estudiante (nombre, curso):
+        print('=== DATOS DEL ESTUDIANTE ===')
+        print(f'Nombre: {nombre}')
+        print(f'Curso: {curso}')
+    nombre_usuario = input("Ingrese el nombre del estudiante:")
+    curso_usuario = input("Ingrese el curso del estudiante:")
+    mostrar_estudiante (nombre_usuario, curso_usuario)
