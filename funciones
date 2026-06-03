@@ -26,3 +26,64 @@ while count != cuantos+1:
     nombre_usuario = input("Ingrese el nombre del estudiante:")
     curso_usuario = input("Ingrese el curso del estudiante:")
     mostrar_estudiante (nombre_usuario, curso_usuario)
+
+def obtener_mensaje (nombre_sistema):
+    mensaje = (f'Bienvenido al sistema {nombre_sistema}')
+    return mensaje
+sistema= input('Ingrese el nombre del sistema: ')
+def generar_nombre_completo (nombre, apellido):
+    nombre_completo = (f'{nombre} {apellido}')
+    return nombre_completo
+
+nombre_usuario = input('Ingrese su nombre: ')
+apellido_usuario = input('Ingrese su apellido: ')
+
+print(obtener_mensaje (sistema))
+print(generar_nombre_completo (nombre_usuario, apellido_usuario))
+print(obtener_mensaje() +", "+ generar_nombre_completo())
+print(f"{obtener_mensaje()}, {generar_nombre_completo()}")
+
+def suma():
+    resul= num1 + num2
+    return resul
+def resta():
+    resul= num1 - num2
+    return resul
+def div():
+    resul= num1 / num2
+    return resul
+def mul():
+    resul= num1 * num2
+    return resul
+
+    
+while True:
+    print("CALCULADORA BASICA")
+    print("1.-SUMA")
+    print("2.-RESTA")
+    print("3.-DIVISION")
+    print("4.-MULTIPLICACION")
+    print("5.-RESTA")
+    val= int(input("-----Ingrese la operacion a realizar: "))
+    if val == 1:
+        num1=float(input("INGRESE EL PRIMER NUMERO 1: "))
+        num2=float(input("INGRESE EL PRIMER NUMERO 2: "))
+        print(suma())
+    elif val == 2:
+        num1=float(input("INGRESE EL PRIMER NUMERO 1: "))
+        num2=float(input("INGRESE EL PRIMER NUMERO 2: "))
+        print(resta())
+    elif val == 3:
+        num1=float(input("INGRESE EL PRIMER NUMERO 1: "))
+        num2=float(input("INGRESE EL PRIMER NUMERO 2: "))
+        print(div())
+    elif val == 4:
+        num1=float(input("INGRESE EL PRIMER NUMERO 1: "))
+        num2=float(input("INGRESE EL PRIMER NUMERO 2: "))
+        print(mul())
+    elif val == 5:
+        print("GRACIAS POR USAR EL SISTEMA")
+        break
+    elif val <=0 or val >=6:
+        print("ingrese un numero valido")
+        continue
