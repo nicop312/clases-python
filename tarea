@@ -2,33 +2,40 @@ def calcular_promedio(n1, n2, n3):
     promedio = (n1 + n2 + n3) / 3
     return promedio
 
-
 def nota_mayor(n1, n2, n3):
-    mayor = max(n1, n2, n3)
+    if n1 >= n2 and n1 >= n3:
+        mayor = n1
+    elif n2 >= n1 and n2 >= n3:
+        mayor = n2
+    else:
+        mayor = n3
     return mayor
 
-
 def nota_menor(n1, n2, n3):
-    menor = min(n1, n2, n3)
+    if n1 <= n2 and n1 <= n3:
+        menor = n1
+    elif n2 <= n1 and n2 <= n3:
+        menor = n2
+    else:
+        menor = n3
     return menor
 
-
 def determinar_aprobacion(promedio):
-    if promedio >= 60:   
-        return "El estudiante APRUEBA"
+    if promedio >= 60:   # Puedes cambiar la nota mínima aprobatoria
+        return "Aprueba"
     else:
-        return "El estudiante REPRUEBA"
+        return "Reprueba"
 
 
+# Programa principal
+print("Ingrese las tres calificaciones del estudiante:")
 
-print("=== MENÚ DE CALIFICACIONES ===")
-
-n1 = float(input("Ingrese la primera calificación: "))
-n2 = float(input("Ingrese la segunda calificación: "))
-n3 = float(input("Ingrese la tercera calificación: "))
+nota1 = float(input("Nota 1: "))
+nota2 = float(input("Nota 2: "))
+nota3 = float(input("Nota 3: "))
 
 while True:
-    print("\nMenú:")
+    print("\n--- MENÚ ---")
     print("1. Calcular el promedio")
     print("2. Mostrar la nota mayor")
     print("3. Mostrar la nota menor")
@@ -38,21 +45,21 @@ while True:
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":
-        resultado = calcular_promedio(n1, n2, n3)
-        print("Promedio:", resultado)
+        resultado = calcular_promedio(nota1, nota2, nota3)
+        print("El promedio es:", resultado)
 
     elif opcion == "2":
-        resultado = nota_mayor(n1, n2, n3)
-        print("Nota mayor:", resultado)
+        resultado = nota_mayor(nota1, nota2, nota3)
+        print("La nota mayor es:", resultado)
 
     elif opcion == "3":
-        resultado = nota_menor(n1, n2, n3)
-        print("Nota menor:", resultado)
+        resultado = nota_menor(nota1, nota2, nota3)
+        print("La nota menor es:", resultado)
 
     elif opcion == "4":
-        promedio = calcular_promedio(n1, n2, n3)
+        promedio = calcular_promedio(nota1, nota2, nota3)
         resultado = determinar_aprobacion(promedio)
-        print(resultado)
+        print("El estudiante:", resultado)
 
     elif opcion == "5":
         print("Saliendo del programa...")
