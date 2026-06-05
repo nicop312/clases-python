@@ -1,0 +1,62 @@
+def calcular_promedio(n1, n2, n3):
+    promedio = (n1 + n2 + n3) / 3
+    return promedio
+
+
+def nota_mayor(n1, n2, n3):
+    mayor = max(n1, n2, n3)
+    return mayor
+
+
+def nota_menor(n1, n2, n3):
+    menor = min(n1, n2, n3)
+    return menor
+
+
+def determinar_aprobacion(promedio):
+    if promedio >= 60:   
+        return "El estudiante APRUEBA"
+    else:
+        return "El estudiante REPRUEBA"
+
+
+
+print("=== MENÚ DE CALIFICACIONES ===")
+
+n1 = float(input("Ingrese la primera calificación: "))
+n2 = float(input("Ingrese la segunda calificación: "))
+n3 = float(input("Ingrese la tercera calificación: "))
+
+while True:
+    print("\nMenú:")
+    print("1. Calcular el promedio")
+    print("2. Mostrar la nota mayor")
+    print("3. Mostrar la nota menor")
+    print("4. Determinar si aprueba o reprueba")
+    print("5. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+        resultado = calcular_promedio(n1, n2, n3)
+        print("Promedio:", resultado)
+
+    elif opcion == "2":
+        resultado = nota_mayor(n1, n2, n3)
+        print("Nota mayor:", resultado)
+
+    elif opcion == "3":
+        resultado = nota_menor(n1, n2, n3)
+        print("Nota menor:", resultado)
+
+    elif opcion == "4":
+        promedio = calcular_promedio(n1, n2, n3)
+        resultado = determinar_aprobacion(promedio)
+        print(resultado)
+
+    elif opcion == "5":
+        print("Saliendo del programa...")
+        break
+
+    else:
+        print("Opción no válida. Intente nuevamente.")
